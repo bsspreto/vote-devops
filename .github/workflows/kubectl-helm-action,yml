@@ -1,0 +1,2 @@
+- name: kubectl & helm
+  uses: wahyd4/kubectl-helm-action@v0.1.2
