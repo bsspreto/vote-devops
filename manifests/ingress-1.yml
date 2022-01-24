@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "kbnpoc-3177"
+    labels:
+        app: "kbnpoc-3177"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: kbn-pocbdf7-kbnpoc-3177.2302913776754ca8b4b4.westus2.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "kbnpoc-3177"
+                servicePort: 80
