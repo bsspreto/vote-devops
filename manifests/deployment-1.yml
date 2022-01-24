@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kbnpoc-3177"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kbnpoc-3177"
+  template:
+    metadata:
+      labels:
+        app: "kbnpoc-3177"
+    spec:
+      containers:
+        - name: "kbnpoc-3177"
+          image: "kuberegpoc.azurecr.io/kbnpoc"
+          ports:
+          - containerPort: 80
